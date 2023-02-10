@@ -24,9 +24,8 @@ def player_by_number(request, player):
 
 def player_text(request, player):
     try:
-        strToReturn = player_roster[player]
         return render(request, 'BaltimoreRavens/player_account.html', {
-            "text":strToReturn,
+            "text": list(player_roster[player]),
             "player_name": player.capitalize()
         })
     except:
