@@ -13,7 +13,9 @@ def index(request):
     roster = list(player_roster.keys())
 
     return render(request, "BaltimoreRavens/index.html", {
-        "roster_key":roster})
+        "text": list(player_roster.values()),
+        "roster_key":roster
+        })
 
 def player_by_number(request, player):
     roster = list(player_roster.keys())
