@@ -12,26 +12,16 @@
 </head>
 <body>
     <div class="container">
-        <div>
-            {{ text }}
-            <ul>
-                {% for key, value in player_roster.items %} 
-                  <li>{{key}} - {{ value.title }}</li>
-                {% endfor %}
-        </div>
         <div class="row">
-            {% for player in roster_key %}
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+            {% for key, value in player_roster.items %} 
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4" style="margin-top: 5%;">
                     <div class="card" style="border: none; background-color: rgb(240, 240, 240)">
-                        <img class="card-img-top" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3916387.png&w=350&h=254" alt="Card image">
+                        <img class="card-img-top" src="{{ value.image }}" alt="{{ key }} Image">
                         <div class="card-body">
-                            {% with cntr=forloop.counter0 %}
-                            <!-- iterate through the list with detail on each athlete-->
-                            <h4 class="card-title">{{ player }}</h4>
-                            {{cntr}}
-                            <p class="card-text">random text</p>
-                            <a href="/BaltimoreRavens/{{ player }}" class="btn btn-dark" style="width: 100%;">See Profile</a>
-                            {% endwith %}
+                            <h4 class="card-title">{{ key }}</h4>
+                            <p class="card-text">Position: {{ value.title }}</p>
+                            <p class="card-text">Number: {{ value.number }}</p>
+                            <a href="/BaltimoreRavens/{{ key }}" class="btn btn-dark" style="width: 100%;">See Profile</a>
                         </div>
                     </div>
                 </div>
