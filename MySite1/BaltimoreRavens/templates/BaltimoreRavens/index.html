@@ -21,9 +21,13 @@
                     <div class="card" style="border: none; background-color: rgb(240, 240, 240)">
                         <img class="card-img-top" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3916387.png&w=350&h=254" alt="Card image">
                         <div class="card-body">
-                            <h4 class="card-title">{{ text.1.2 }}</h4>
+                            {% with cntr=forloop.counter0 %}
+                            <!-- iterate through the list with detail on each athlete-->
+                            <h4 class="card-title">{{ text }}.{{ cntr }}</h4>
+                            {{cntr}}
                             <p class="card-text">random text</p>
                             <a href="/BaltimoreRavens/{{ player }}" class="btn btn-dark" style="width: 100%;">See Profile</a>
+                            {% endwith %}
                         </div>
                     </div>
                 </div>

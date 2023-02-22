@@ -5,7 +5,7 @@ def index(request):
     return render(request, "BaltimoreRavens/index.html")
 
 player_roster = {
-    "Lamar Jackson":["Text1", "Text2", "Text3"],
+    "Lamar Jackson":["Text10", "Text20", "Text30"],
     "Lamar Jackson 2":["Text1", "Text2", "Text3"]
 }
 
