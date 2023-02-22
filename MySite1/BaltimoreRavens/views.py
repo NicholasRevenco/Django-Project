@@ -5,20 +5,23 @@ def index(request):
     return render(request, "BaltimoreRavens/index.html")
 
 player_roster = {
-    "Lamar Jackson":["Text10", "Text20", "Text30"],
-    "Lamar Jackson 2":["Text1", "Text2", "Text3"]
+    "Lamar Jackson 1":{'name': 'Lamar Jackson 1', 'title': 'linebacker', 'number': '1'},
+    "Lamar Jackson 2":{'name': 'Lamar Jackson 2', 'title': 'kicker', 'number': '2'},
+    "Lamar Jackson 3":{'name': 'Lamar Jackson 3', 'title': 'Quarterback', 'number': '5'}
 }
 
 def index(request):
-    roster = list(player_roster.keys())
+    roster = player_roster.keys()
 
     return render(request, "BaltimoreRavens/index.html", {
-        "text": list(player_roster.values()),
-        "roster_key":roster
+        "text": player_roster.values(),
+        "roster_key":roster,
+        "player_roster": player_roster
+
         })
 
 def player_by_number(request, player):
-    roster = list(player_roster.keys())
+    roster = player_roster.keys()
     if player > len(roster) or player < 1:
         return HttpResponseNotFound("You entered an invalid numeric player's number")
     next_player = roster[player-1]
@@ -27,7 +30,7 @@ def player_by_number(request, player):
 def player_text(request, player):
     try:
         return render(request, 'BaltimoreRavens/player_account.html', {
-            "text": list(player_roster[player]),
+            "text": player_roster[player],
             "player_name": player.capitalize()
         })
     except:

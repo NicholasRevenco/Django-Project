@@ -14,6 +14,10 @@
     <div class="container">
         <div>
             {{ text }}
+            <ul>
+                {% for key, value in player_roster.items %} 
+                  <li>{{key}} - {{ value.title }}</li>
+                {% endfor %}
         </div>
         <div class="row">
             {% for player in roster_key %}
@@ -23,7 +27,7 @@
                         <div class="card-body">
                             {% with cntr=forloop.counter0 %}
                             <!-- iterate through the list with detail on each athlete-->
-                            <h4 class="card-title">{{ text }}.{{ cntr }}</h4>
+                            <h4 class="card-title">{{ player }}</h4>
                             {{cntr}}
                             <p class="card-text">random text</p>
                             <a href="/BaltimoreRavens/{{ player }}" class="btn btn-dark" style="width: 100%;">See Profile</a>
