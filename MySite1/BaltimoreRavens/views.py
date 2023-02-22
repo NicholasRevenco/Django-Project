@@ -5,9 +5,9 @@ def index(request):
     return render(request, "BaltimoreRavens/index.html")
 
 player_roster = {
-    "Lamar Jackson 1":{'name': 'Lamar Jackson 1', 'title': 'linebacker', 'number': '1', 'image': 'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3916387.png&w=350&h=254'},
-    "Lamar Jackson 2":{'name': 'Lamar Jackson 2', 'title': 'kicker', 'number': '2', 'image': 'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3916387.png&w=350&h=254'},
-    "Lamar Jackson 3":{'name': 'Lamar Jackson 3', 'title': 'Quarterback', 'number': '5', 'image': 'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3916387.png&w=350&h=254'}
+    "Lamar Jackson":{'name': 'Lamar Jackson', 'position': 'Quarterback', 'number': '8', 'height': '6 2', 'weight': '212 lbs', 'college': 'Louisville', 'image': 'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3916387.png&w=350&h=254'},
+    "Tyler Huntley":{'name': 'Tyler Huntley', 'position': 'Quarterback', 'number': '2', 'height': '6 1', 'weight': '196 lbs', 'college': 'Utah', 'image': 'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4035671.png&w=350&h=254'},
+    "Anthony Brown":{'name': 'Anthony Brown', 'position': 'Quarterback', 'number': '12', 'height': '6 1', 'weight': '228 lbs', 'college': 'Oregon', 'image': 'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4035312.png&w=350&h=254'}
 }
 
 def index(request):
