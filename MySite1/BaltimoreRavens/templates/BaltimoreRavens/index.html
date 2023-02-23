@@ -17,15 +17,15 @@
         <h3 class="text-center mt-3">Players:</h3>
         <div class="row">
             {% for key, value in player_roster.items %} 
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4" style="margin-top: 5%;">
-                    <div class="card" style="border: none; background-color: rgb(240, 240, 240)">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4" id="marginTop">
+                    <div class="card" id="cardStyling">
                         <img class="card-img-top" src="{{ value.image }}" alt="{{ key }} Image">
                         <div class="card-body">
                             <h4 class="card-title">{{ key }}</h4>
                             <p class="card-text">Position: {{ value.position }}</p>
                             <p class="card-text">Number: {{ value.number }}</p>
                             <p class="card-text">Number: {{ value.height }}</p>
-                            <a href="/BaltimoreRavens/{{ key }}" class="btn btn-dark" style="width: 100%;">See Profile</a>
+                            <a href="/BaltimoreRavens/{{ key }}" class="btn btn-dark" id="btnHundred">See Profile</a>
                         </div>
                     </div>
                 </div>
