@@ -30,8 +30,7 @@ def player_by_number(request, player):
 def player_text(request, player):
     try:
         return render(request, 'BaltimoreRavens/player_account.html', {
-            "text": player_roster[player],
-            "player_name": player.capitalize()
+            "player_roster": player_roster[player],
         })
     except:
         return HttpResponseNotFound("Player not valid!")
