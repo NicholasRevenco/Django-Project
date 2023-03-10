@@ -2,6 +2,7 @@
 
 from pathlib import Path
 import pymysql
+import MYSQLdb
 pymysql.install_as_MySQLdb()
 
 """
@@ -37,6 +38,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'MusicDatabase',
     'BaltimoreRavens',
     'challenges',
     'django.contrib.admin',
@@ -83,8 +85,12 @@ WSGI_APPLICATION = 'MySite1.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'music',
+        'USER': 'AdvAppDevStudnt',
+        'PASSWORD': '6dn-Ltt@x97UGPZb',
+        'HOST': "mysql5.websitelive.net",
+        'PORT': '3306'
     }
 }
 
