@@ -2,7 +2,6 @@
 
 from pathlib import Path
 import pymysql
-import MYSQLdb
 pymysql.install_as_MySQLdb()
 
 """
