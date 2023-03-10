@@ -1,3 +1,9 @@
+
+
+from pathlib import Path
+import pymysql
+pymysql.install_as_MySQLdb()
+
 """
 Django settings for MySite1 project.
 
