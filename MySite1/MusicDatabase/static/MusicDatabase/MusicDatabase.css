@@ -1,0 +1,16 @@
+.header {
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.tableBg {
+    border-radius: 25px;
+    background-color: rgb(218, 232, 246) !important;
+    margin: 5vh;
+    padding: 1vh;
+}
+
+.tableBgColor {
+    background-color: rgb(218, 232, 246) !important;
+}
